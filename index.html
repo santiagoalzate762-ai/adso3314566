@@ -12,7 +12,7 @@
             font-family: sans-serif; 
             display: flex;
             justify-content: center;
-            aling-items: center;
+            align-items: center;
             min-height: 100dvh;
             main {
                 h1 {
@@ -33,6 +33,33 @@
                     font-size: 1.4rem;
                      font-family: "Space Grotesk", sans-serif;
                 }
+
+                menu {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.6rem;
+
+                    a:link, a:visited {
+                        border-radius: 12rem;
+                        background-color: #73d37f;
+                        color: rgb(0, 255, 191);
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        padding: 0.4rem;
+                        span{
+                            width: 80px;
+                            height: 80px;
+                            background-color:rgb(92, 188, 212);
+                            border-radius: 50%;
+                            color: aqua;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 2rem;
+                        }
+                    }
+                }
             }
         
     </style>
@@ -45,6 +72,40 @@
     <h1> ADSO3314566</h1>
     <img src="./imagen.jpeg" alt="">
     <h4>santiago alzate</h4>
+    <menu>
+
+        <a href="01-emmet/">
+            <span>01</span>
+            <aside>
+                <h4>Emmet</h4>
+                <small>work flow - Markup & Styling</small>
+            </aside>
+        </a>
+
+        <a href="02-html/">
+            <span>02</span>
+            <aside>
+                <h4>Html</h4>
+                <small>Structure - Hypertext Markup Language </small>
+            </aside>
+        </a>
+
+        <a href="03-css/">
+            <span>03</span>
+            <aside>
+                <h4>Css</h4>
+                <small>Look & Fell - Cascading Style Sheets</small>
+            </aside>
+        </a>
+
+        <a href="04-js/">
+            <span>04</span>
+            <aside>
+                <h4>Javascript</h4>
+                <small>Behavior - Programing Launguage</small>
+            </aside>
+        </a>
+    </menu>
 </main>
 
 </html>
