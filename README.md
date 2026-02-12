@@ -15,4 +15,4 @@
 
 [VERCEL URL](https://adso3314566-vert.vercel.app/)
 
-![santiago alzate](127.0.0.1:5501/adso3314566/imagen.jpeg)
+![santiago alzate](https://adso3314566/imagen.jpeg-vert.vercel.app/)
