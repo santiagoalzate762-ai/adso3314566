@@ -13,6 +13,6 @@
 
 [ADSO Files DRIVE](https://tinyurl.com/wnkk334u)
 
-[VERCEL URL](https://adso3314566-vert.vercel.app/)
+[VERCEL URL](https://adso3314566-vercel.app/)
 
 ![santiago alzate](https://adso3314566-vert.vercel.app/imagen.jpeg)

@@ -11,7 +11,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
             min-height: 100dvh;
             main {
                 h1 {
-                    font-size: 3.4rem;
+                    font-size: 3rem;
+                    text-align: center;
                     margin: 0;
                 }
                 img {
