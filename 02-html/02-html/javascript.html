@@ -12,14 +12,23 @@
     </a>
     <main>
         <header>
-            <h1>01 Document</h1>
-            <h2></h2>
-            <section>
-                <h3>Defines basic structure of an HTML5 document.  
-Define la estructura básica de un documento HTML5.</h3>
-                <p></p>
-            </section>
+            <h1>04-javascript</h1>
+            <h2>Inserts JavaScript code. </h2>
         </header>
+        <section>
+            <h3>Javascript</h3>
+            <h4 class="user"></h4>
+        </section>
     </main>
+    <script>
+        
+        const user=document.querySelector(".user")
+        const answer=prompt("what´s your name?")
+        if(answer){
+            user.textContent="welcome "+answer
+        } else {
+            user.textContent="welcome guest"
+        }
+    </script>
 </body>
 </html>
