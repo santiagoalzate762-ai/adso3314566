@@ -1,5 +1,39 @@
 body {
 
+
+    
+                        header {
+                            h1 {
+                                font-size: 2rem;
+                            }
+                            h2 {
+                                font-size: 1rem;
+                                color:#fff9
+                            }
+                            h1, h2 {
+                                text-align: center;
+                            }
+                            section {
+                                background-color: #0009;
+                                padding: 1rem;
+                                border-radius: 0.2rem;
+                                min-width: 380px;
+                                margin-top: 2rem;
+                                
+                                h3 {
+                                border-bottom: 2px dotted #fff;
+                            }
+
+                            p {
+                                color: #fff9;
+                            }
+                            }
+
+                            
+                            
+                        }
+
+
              a.btn-home {
                 border: 2px solid white;
                 border-radius: 50%;
@@ -72,6 +106,7 @@ body {
                             text-indent: 0.2rem;
                             width: 225px;
                         }
+
 
                         small {
                             width: 225px;
