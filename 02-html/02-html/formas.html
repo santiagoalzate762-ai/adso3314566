@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/02-html.css">
+</head>
+<style>
+  fieldset {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 2px solid #4CAF50;
+  }
+
+  legend {
+      font-weight: bold;
+      color: #4CAF50;
+      padding: 0 10px;
+  }
+
+  label {
+      margin-top: 10px;
+      font-weight: bold;
+  }
+
+  input, textarea, select {
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  input[type="submit"], input[type="reset"] {
+      width: auto;
+      padding: 10px 20px;
+      margin-top: 15px;
+      margin-right: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #45a049;
+  }
+
+  input[type="checkbox"] {
+      width: auto;
+      margin-right: 8px;
+  }
+</style>
+</head>
+<body>
+<a class="btn-home" href="../index.html">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+    <path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path>
+  </svg>
+</a>
+
+<main>
+  <header>
+      <h1>11-forms</h1>
+      <h2>Creates interactive forms for user input.</h2>
+  </header>
+  <section>
+      <form class="mi-formulario">
+
+        <fieldset>
+          <legend>Información Personal</legend>
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+
+          <label for="contraseña">Contraseña:</label>
+          <input type="password" id="contraseña" name="contraseña" placeholder="********" required>
+
+          <label for="fecha">Fecha de nacimiento:</label>
+          <input type="date" id="fecha" name="fecha">
+
+          <label for="color">Color favorito:</label>
+          <input type="color" id="color" name="color">
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferencias</legend>
+
+          <label for="genero">Género:</label>
+          <select id="genero" name="genero" required>
+            <option value="">Selecciona...</option>
+            <option value="femenino">Femenino</option>
+            <option value="masculino">Masculino</option>
+            <option value="otro">Otro</option>
+          </select>
+
+          <label for="suscripcion">
+            <input type="checkbox" id="suscripcion" name="suscripcion">
+            Deseo recibir boletines
+          </label>
+
+          <label for="rango">Nivel de experiencia:</label>
+          <input type="range" id="rango" name="rango" min="0" max="100" value="50">
+        </fieldset>
+
+        <fieldset>
+          <legend>Acciones</legend>
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Limpiar">
+        </fieldset>
+
+      </form>
+  </section>
+</main>
+</body>
+</html>

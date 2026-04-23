@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-Images</title>
+    <link rel="stylesheet" href="/src/css/02-html.css">
+</head>
+<style>
+    body{
+        flex-direction: column;
+    }
+  #contenedor {
+    width: 320px;
+    margin: 2rem auto;
+    border: 1px solid black;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: monospace, monospace;
+    background-color: #f9f9f9;
+  }
+
+  .encabezado,
+  .contenido,
+  .pie {
+    background-color: #bfc7d2;
+    border: 1px solid black;
+    padding: 30px 0;
+    font-size: 1.3rem;
+    color: #555;
+    text-align: center;
+    user-select: none;
+    position: relative;
+  }
+
+  .encabezado {
+    margin-bottom: 8px;
+  }
+
+  .contenido {
+    margin-bottom: 8px;
+  }
+
+  .etiqueta {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    font-size: 0.9rem;
+    color: #333;
+    background: rgba(255 255 255 / 0.7);
+    padding: 0 4px;
+    border-radius: 3px;
+    user-select: text;
+  }
+</style>
+</head>
+<body>
+
+      <a class="btn-home" href="../index.html">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+    <path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path>
+  </svg>
+</a>
+<header>
+    <h1>12-Graphics</h1>
+    <h2>Creates inline graphics with tags.</h2>
+</header>
+<section>
+
+<div id="contenedor">
+
+  <div class="encabezado">
+    <div class="etiqueta">&lt;div class="encabezado"&gt;</div>
+    encabezado
+  </div>
+
+  <div class="contenido">
+    <div class="etiqueta">&lt;div class="contenido"&gt;</div>
+    contenido
+  </div>
+
+  <div class="pie">
+    <div class="etiqueta">&lt;div class="pie"&gt;</div>
+    pie
+  </div>
+</div>
+</section>
+
+</body>
+</html>
