@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../src/css/01-emmet.css">
+
+
+</head>
+<body>
+    <a  class="btn-home" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path></svg>
+    </a>
+    <main>
+        <h1>01 -Emmet</h1>
+        <img src="../src/imgs/emmet-logo-svg-vector.png" alt="emmet" width="240px">
+        <h4>Work Flow - Markup & Styling</h4>
+
+        <section class="container">
+
+        <section>
+            <h2>Nesting </h2>
+            <h4>Example: < </h4>
+            <p>ul>li>a </p>
+            <h4>Result</h4>
+
+<xmp>
+    <ul>
+        <li><a href=""></a></li>
+    </ul>
+</xmp>
+        </section>
+
+ <section>
+            <h2>Sibling </h2>
+            <h4>Example: + </h4>
+            <p>section+header+nav</p>
+            <h4>Result</h4>
+
+<xmp>
+    <section></section>
+    <header></header>
+    <nav></nav>
+</xmp>
+        </section>
+
+ <section>
+            <h2>Repeat  </h2>
+            <h4>Example: * </h4>
+            <p>ul>li*3</p>
+            <h4>Result</h4>
+
+<xmp>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</xmp>
+        </section>
+
+ <section>
+            <h2>Classes </h2>
+            <h4>Example: . </h4>
+            <p>div.contenedor</p>
+            <h4>Result</h4>
+
+<xmp>
+    <ul>
+        <div class="contenedor"></div>
+    </ul>
+</xmp>
+        </section>
+
+ <section>
+            <h2>Text </h2>
+            <h4>Example:{} </h4>
+            <p>div{Lorem Ipsum Dolor}</p>
+            <h4>Result</h4>
+
+<xmp>
+    <ul>
+        <div>Lorem Ipsum Dolor</div>
+    </ul>
+</xmp>
+        </section>
+
+ <section>
+            <h2>Custom Atlr </h2>
+            <h4>Example: [] </h4>
+            <p>a[href=www.google.com]</p>
+            <h4>Result</h4>
+
+<xmp>
+    <ul>
+        <a href="www.google.com"></a>
+    </ul>
+</xmp>
+        </section>
+
+ <section>
+            <h2>Numbering </h2>
+            <h4>Example: $ </h4>
+            <p>ul>li.num$*3</p>
+            <h4>Result</h4>
+
+<xmp>
+    <ul>
+        <li class="num1"></li>
+        <li class="num2"></li>
+        <li class="num3"></li>
+    </ul>
+</xmp>
+        </section>
+
+ <section>
+            <h2>Invert Numbs > </h2>
+            <h4>Example: @- </h4>
+            <p>ul>li.num$@-*3</p>
+            <h4>Result</h4>
+
+<xmp>
+    <ul>
+        <li class="num3"></li>
+        <li class="num2"></li>
+        <li class="num1"></li>
+    </ul>
+</xmp>
+        </section>
+
+ <section>
+            <h2>Leveling </h2>
+            <h4>Example: ^ </h4>
+            <p>section>article>div^p</p>
+            <h4>Result</h4>
+
+<xmp>
+    <section>
+        <article>
+            <div></div>
+        </article>
+        <p></p>
+    </section>
+</xmp>
+        </section>
+
+ <section>
+            <h2>Grouping > </h2>
+            <h4>Example: () </h4>
+            <p>(header>nav)(section>article)</p>
+            <h4>Result</h4>
+
+<xmp>
+    <header>
+        <nav></nav>
+    </header>
+    <section>
+        <article></article>
+    </section>
+</xmp>
+        </section>
+ <section>
+            <h2>Dummy Text </h2>
+            <h4>Example:lorem3 </h4>
+            <p>lorem</p>
+            <h4>Result</h4>
+
+<xmp>
+    <ul>
+        Lorem ipsum dolor 
+    </ul>
+</xmp>
+        </section>
+<<<<<<< HEAD
+
+    <section>   
+            <h2>15. Documents HTML</h2>
+            <h4>Example</h4>
+            <p>html:xs</p>
+            <p>html:xt</p>
+            <p>html:4s</p>
+            <p>html:4t</p>
+            <p>html:5</p>
+            <h4>Result</h4>
+<xmp>
+    Documento xhtml 1.0 Strict
+    Documento xhtml 1.0 Transitional
+    Documento html 4.01 Strict
+    Documento html 4.01 Transitional
+    Documento html 5
+</xmp>
+        </section>
+
+        <section>   
+            <h2>16. Meta TAGS</h2>
+            <h4>Example</h4>
+            <p>meta:vp</p>
+            <h4>Result</h4>
+<xmp>
+    <meta name="viewport" content=“width=device-width...>
+</xmp>
+        </section>
+
+     <section>
+        <div class="linea">
+</div>
+            
+
+<xmp>
+    <header id="header">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar_header">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.php" class="navbar-brand">
+                    <img src="imgs/logo.png" alt="">
+                </a>
+            </div>
+            <div class="collapse">
+                <ul class="nav navbar-nav"></ul>
+            </div>
+        </div>
+    </nav>
+</header>
+</xmp>
+        </section>
+</section>
+
+    </main>
+</body>
+</html>
