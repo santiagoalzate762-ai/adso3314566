@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-Colors</title>
+    <link rel="stylesheet" href="/src/css/03.css.css">
+    <style>
+        div.colors {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            div {
+                color: black;
+                 display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.4s ease-in;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.4);
+                }
+                &:first-child {
+                    color: white;
+                }
+                &:last-child {
+                    color: white;
+                }
+               
+                div {
+                    height: 70px;
+                    width: 70px;
+                    &.maroon { background-color: maroon;}
+                    &.red { background-color: red;}
+                    &.orange { background-color: orange;}
+                    &.yellow { background-color: yellow;}
+                    &.olive { background-color: olive;}
+                    &.purple { background-color: maroon;}
+                    &.red { background-color: red;}
+                    &.orange { background-color: orange;}
+                    &.yellow { background-color: yellow;}
+                    &.olive { background-color: olive;}
+                    &.purple { background-color: purple;}
+                    &.fuchsia { background-color: fuchsia;} 
+                    &.white { background-color: white;}
+                    &.lime { background-color: lime;}
+                    &.green { background-color: green;}
+                    &.navy { background-color: navy;}
+                    &.blue { background-color: blue;}
+                    &.aqua { background-color: aqua;}
+                    &.teal { background-color: teal;}
+                    &.black { background-color: black;}
+                    &.silver { background-color: silver;}
+                    &.gray { background-color: gray;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="btn-home" href="../03-Css/index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <h1>11-Colors</h1>
+            <h2>Are specified using predefined color names, or RGB, HEX, HSL.</h2>
+        </header>
+        <section>
+            <h3>Name color</h3>
+            <div class="colors">
+            <div>
+                <div class="maroon">Maroon</div>
+                <div class="red">Red</div>
+                <div class="orange">Orange</div>
+                <div class="yellow">Yellow</div>
+                <div class="olive">Olive</div>
+            </div>
+            <div>
+                <div class="purple">Purple</div>
+                <div class="fuchsia">Fuchsia</div>
+                <div class="white">White</div>
+                <div class="lime">Lime</div>
+                <div class="green">Green</div>
+            </div>
+            <div>
+                <div class="navy">Navy</div>
+                <div class="blue">Blue</div>
+                <div class="aqua">Aqua</div>
+                <div class="teal">Teal</div>
+            </div>
+            <div>
+                <div class="black">Black</div>
+                <div class="silver">Silver</div>
+                <div class="gray">Gray</div>
+            </div>
+        </div>
+
+
+
+
+        <h3>rgb decimal</h3>
+            <div class="colors">
+            
+    <div>
+        <div class="maroon">rgba(255, 0, 0, 1)</div>
+        <div class="red">rgba(255, 0, 0, 1)</div>
+        <div class="orange">rgba(255, 165, 0, 1)</div>
+        <div class="yellow">rgba(255, 255, 0, 1)</div>
+        <div class="olive">rgba(128, 128, 0, 1)</div>
+    </div>
+
+    <div>
+        <div class="purple">rgba(128, 0, 128, 1)</div>
+        <div class="fuchsia">rgba(255, 0, 255, 1)</div>
+        <div class="white">rgba(255, 255, 255, 1)</div>
+        <div class="lime">rgba(0, 255, 0, 1)</div>
+        <div class="green">rgba(0, 128, 0, 1)</div>
+    </div>
+
+    <div>
+        <div class="navy">rgba(0, 0, 128, 1)</div>
+        <div class="blue">rgba(0, 0, 255, 1)</div>
+        <div class="aqua">rgba(0, 255, 255, 1)</div>
+        <div class="teal">rgba(0, 128, 128, 1)</div>
+    </div>
+
+    <div>
+        <div class="black">rgba(0, 0, 0, 1)</div>
+        <div class="silver">rgba(192, 192, 192, 1)</div>
+        <div class="gray">rgba(128, 128, 128, 1)</div>
+    </div>
+        </div>
+        </section>
+    </main>
+</body>
+</html>
