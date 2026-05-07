@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-Document Style</title>
+    <link rel="stylesheet" href="/src/css/03.css.css">
+    <style>
+        section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ========================= */
+/* HOVER */
+/* ========================= */
+
+.hover-btn{
+    padding: 10px 20px;
+    background: crimson;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hover-btn:hover{
+    background: orange;
+    transform: scale(1.1);
+}
+
+/* ========================= */
+/* ACTIVE */
+/* ========================= */
+
+.active-btn{
+    padding: 10px 20px;
+    background: dodgerblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.active-btn:active{
+    background: green;
+    transform: scale(0.95);
+}
+
+/* ========================= */
+/* FOCUS */
+/* ========================= */
+
+.focus-input{
+    padding: 10px;
+    border: 2px solid white;
+    outline: none;
+}
+
+.focus-input:focus{
+    border-color: orange;
+    background: black;
+    color: white;
+}
+
+/* ========================= */
+/* FIRST CHILD */
+/* ========================= */
+
+.list p:first-child{
+    color: yellow;
+    font-weight: bold;
+}
+
+/* ========================= */
+/* NTH CHILD */
+/* ========================= */
+
+.grid{
+    display: flex;
+    gap: 10px;
+}
+
+.grid div{
+    width: 50px;
+    height: 50px;
+    background: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* solo el segundo elemento */
+.grid div:nth-child(2){
+    background: red;
+}
+
+/* alternar */
+.grid div:nth-child(even){
+    opacity: 0.6;
+}
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg> 
+    </a>
+    <main>
+        <header>
+            <h1>20 pseudoclases</h1>
+            <h2>Is used to define a special state of an element.</h2>
+        </header>
+        <section>
+
+        <!-- HOVER -->
+        <button class="hover-btn">
+            Hover aquí
+        </button>
+
+        <!-- ACTIVE -->
+        <button class="active-btn">
+            Click (active)
+        </button>
+
+        <!-- FOCUS -->
+        <input class="focus-input" type="text" placeholder="Hazme focus">
+
+        <!-- FIRST CHILD -->
+        <div class="list">
+            <p>Primer elemento</p>
+            <p>Segundo elemento</p>
+            <p>Tercero elemento</p>
+        </div>
+
+        <!-- NTH CHILD -->
+        <div class="grid">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+
+    </section>
+    </main>
+</body>
+</html>
