@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_document</title>
+    <link rel="stylesheet" href="/src/css/03.css.css">
+    <link rel="stylesheet" href="/src/css/externalfile.css">
+    <style>
+        /* Contenedor */
+.text-shadow-examples {
+    padding: 20px;
+    text-align: center;
+}
+
+.text-shadow-examples p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* 1. Sombra básica */
+.shadow-1 {
+    text-shadow: 2px 2px 4px gray;
+}
+
+/* 2. Sombra difuminada */
+.shadow-2 {
+    text-shadow: 0 0 10px #555;
+}
+
+/* 3. Sombra de color */
+.shadow-3 {
+    color: black;
+    text-shadow: 3px 3px 5px red;
+}
+
+/* 4. Efecto neón */
+.shadow-4 {
+    color: #fff;
+    background: #111;
+    padding: 10px;
+    text-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff;
+}
+
+/* 5. Sombra múltiple */
+.shadow-5 {
+    color: #fff;
+    text-shadow:
+        2px 2px 0 #ff0000,
+        4px 4px 0 #0000ff;
+}
+    </style>
+</head>
+<body>
+    <a class="btn-home" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path></svg>
+    </a>
+    <main>
+        <header>
+            <h1>30. Text Shadow</h1>
+            <h2>Adds shadows to text.</h2>
+            <section class="text-shadow-examples">
+                <h2>30. Text Shadow</h2>
+                <p class="shadow-1">Sombra básica</p>
+                <p class="shadow-2">Sombra difuminada</p>
+                <p class="shadow-3">Sombra roja</p>
+                <p class="shadow-4">Efecto neón</p>
+                <p class="shadow-5">Sombra múltiple</p>
+            </section>
+        </header>
+    </main>
+</body>
+</html>

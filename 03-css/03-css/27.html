@@ -1,438 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>09-absolute-units</title>
-    <link rel="stylesheet" href="/src/css/03.css.css">
-    <style>
-    .px {
-        width:10px;
-  height:10px;
-  background:rgb(0,4,0);
-  box-shadow:
-    8px 0px rgb(182,42,45),
-    16px 0px rgb(192,43,47),
-    24px 0px rgb(188,43,50),
-    32px 0px rgb(3,5,4),
-    40px 0px rgb(3,0,0),
-    48px 0px rgb(132,29,46),
-    56px 0px rgb(51,12,17),
-    64px 0px rgb(0,2,1),
-    72px 0px rgb(108,31,51),
-    80px 0px rgb(50,5,10),
-    88px 0px rgb(50,10,18),
-    96px 0px rgb(0,2,3),
-    104px 0px rgb(132,29,46),
-    112px 0px rgb(132,31,47),
-    120px 0px rgb(23,3,4),
-    128px 0px rgb(0,0,0),
-    136px 0px rgb(0,0,0),
-    144px 0px rgb(0,0,0),
-    152px 0px rgb(63,63,63),
-    0px 8px rgb(0,0,0),
-    8px 8px rgb(5,4,2),
-    16px 8px rgb(189,42,48),
-    24px 8px rgb(178,42,44),
-    32px 8px rgb(0,7,2),
-    40px 8px rgb(134,27,35),
-    48px 8px rgb(129,31,46),
-    56px 8px rgb(133,31,45),
-    64px 8px rgb(133,26,44),
-    72px 8px rgb(112,31,48),
-    80px 8px rgb(41,6,10),
-    88px 8px rgb(130,33,52),
-    96px 8px rgb(129,32,49),
-    104px 8px rgb(132,29,46),
-    112px 8px rgb(122,31,49),
-    120px 8px rgb(112,29,49),
-    128px 8px rgb(0,0,0),
-    136px 8px rgb(0,0,2),
-    144px 8px rgb(1,0,0),
-    152px 8px rgb(63,63,63),
-    0px 16px rgb(0,0,0),
-    8px 16px rgb(0,0,0),
-    16px 16px rgb(7,0,7),
-    24px 16px rgb(189,42,48),
-    32px 16px rgb(187,44,50),
-    40px 16px rgb(192,41,50),
-    48px 16px rgb(131,29,50),
-    56px 16px rgb(126,34,47),
-    64px 16px rgb(131,28,45),
-    72px 16px rgb(118,41,59),
-    80px 16px rgb(132,29,46),
-    88px 16px rgb(5,1,2),
-    96px 16px rgb(133,30,47),
-    104px 16px rgb(132,29,46),
-    112px 16px rgb(123,32,50),
-    120px 16px rgb(106,32,47),
-    128px 16px rgb(0,2,1),
-    136px 16px rgb(111,30,49),
-    144px 16px rgb(0,2,2),
-    152px 16px rgb(60,60,60),
-    0px 24px rgb(6,0,0),
-    8px 24px rgb(190,46,56),
-    16px 24px rgb(0,5,2),
-    24px 24px rgb(184,46,44),
-    32px 24px rgb(181,45,57),
-    40px 24px rgb(134,29,46),
-    48px 24px rgb(189,44,51),
-    56px 24px rgb(6,0,0),
-    64px 24px rgb(190,39,46),
-    72px 24px rgb(134,29,44),
-    80px 24px rgb(6,10,9),
-    88px 24px rgb(111,30,49),
-    96px 24px rgb(140,26,49),
-    104px 24px rgb(136,30,50),
-    112px 24px rgb(122,33,51),
-    120px 24px rgb(37,0,5),
-    128px 24px rgb(134,31,52),
-    136px 24px rgb(0,3,0),
-    144px 24px rgb(109,30,49),
-    152px 24px rgb(63,63,63),
-    0px 32px rgb(0,0,0),
-    8px 32px rgb(13,2,0),
-    16px 32px rgb(185,45,56),
-    24px 32px rgb(188,43,50),
-    32px 32px rgb(182,45,53),
-    40px 32px rgb(188,43,50),
-    48px 32px rgb(188,43,50),
-    56px 32px rgb(6,0,0),
-    64px 32px rgb(185,43,59),
-    72px 32px rgb(132,29,46),
-    80px 32px rgb(88,41,49),
-    88px 32px rgb(128,32,46),
-    96px 32px rgb(135,29,41),
-    104px 32px rgb(0,2,0),
-    112px 32px rgb(123,32,47),
-    120px 32px rgb(124,34,46),
-    128px 32px rgb(135,33,54),
-    136px 32px rgb(124,34,46),
-    144px 32px rgb(0,0,2),
-    152px 32px rgb(63,63,63),
-    0px 40px rgb(0,0,0),
-    8px 40px rgb(4,0,3),
-    16px 40px rgb(189,42,50),
-    24px 40px rgb(188,43,50),
-    32px 40px rgb(182,45,53),
-    40px 40px rgb(188,43,50),
-    48px 40px rgb(189,44,51),
-    56px 40px rgb(138,30,46),
-    64px 40px rgb(133,27,47),
-    72px 40px rgb(132,29,46),
-    80px 40px rgb(68,37,34),
-    88px 40px rgb(132,29,46),
-    96px 40px rgb(4,0,1),
-    104px 40px rgb(132,29,46),
-    112px 40px rgb(124,31,50),
-    120px 40px rgb(134,29,46),
-    128px 40px rgb(134,27,47),
-    136px 40px rgb(112,29,49),
-    144px 40px rgb(3,4,6),
-    152px 40px rgb(63,63,63),
-    0px 48px rgb(0,0,0),
-    8px 48px rgb(0,0,0),
-    16px 48px rgb(0,0,0),
-    24px 48px rgb(133,28,43),
-    32px 48px rgb(188,43,50),
-    40px 48px rgb(188,43,50),
-    48px 48px rgb(130,31,49),
-    56px 48px rgb(123,39,52),
-    64px 48px rgb(134,27,43),
-    72px 48px rgb(134,29,46),
-    80px 48px rgb(136,27,46),
-    88px 48px rgb(124,33,50),
-    96px 48px rgb(124,32,45),
-    104px 48px rgb(132,29,46),
-    112px 48px rgb(132,29,50),
-    120px 48px rgb(134,29,46),
-    128px 48px rgb(2,0,1),
-    136px 48px rgb(1,0,0),
-    144px 48px rgb(0,0,0),
-    152px 48px rgb(63,63,63),
-    0px 56px rgb(0,0,0),
-    8px 56px rgb(0,0,0),
-    16px 56px rgb(6,0,6),
-    24px 56px rgb(188,43,50),
-    32px 56px rgb(189,42,48),
-    40px 56px rgb(189,42,50),
-    48px 56px rgb(193,42,49),
-    56px 56px rgb(187,40,46),
-    64px 56px rgb(15,0,0),
-    72px 56px rgb(105,32,43),
-    80px 56px rgb(132,29,46),
-    88px 56px rgb(132,29,46),
-    96px 56px rgb(132,28,51),
-    104px 56px rgb(3,4,6),
-    112px 56px rgb(134,29,46),
-    120px 56px rgb(129,31,44),
-    128px 56px rgb(7,2,8),
-    136px 56px rgb(0,0,0),
-    144px 56px rgb(0,0,0),
-    152px 56px rgb(63,63,63),
-    0px 64px rgb(0,0,0),
-    8px 64px rgb(0,0,0),
-    16px 64px rgb(189,46,52),
-    24px 64px rgb(191,41,52),
-    32px 64px rgb(182,46,50),
-    40px 64px rgb(189,42,48),
-    48px 64px rgb(188,43,50),
-    56px 64px rgb(187,44,50),
-    64px 64px rgb(126,30,44),
-    72px 64px rgb(13,0,0),
-    80px 64px rgb(132,29,46),
-    88px 64px rgb(133,27,49),
-    96px 64px rgb(131,29,51),
-    104px 64px rgb(4,4,6),
-    112px 64px rgb(13,1,1),
-    120px 64px rgb(99,38,45),
-    128px 64px rgb(115,34,53),
-    136px 64px rgb(0,0,0),
-    144px 64px rgb(0,0,0),
-    152px 64px rgb(63,63,63),
-    0px 72px rgb(0,0,0),
-    8px 72px rgb(0,0,0),
-    16px 72px rgb(187,43,52),
-    24px 72px rgb(188,43,50),
-    32px 72px rgb(35,0,0),
-    40px 72px rgb(97,37,47),
-    48px 72px rgb(186,49,57),
-    56px 72px rgb(144,23,40),
-    64px 72px rgb(185,46,51),
-    72px 72px rgb(136,17,36),
-    80px 72px rgb(4,3,1),
-    88px 72px rgb(116,50,62),
-    96px 72px rgb(121,38,56),
-    104px 72px rgb(134,29,46),
-    112px 72px rgb(109,49,59),
-    120px 72px rgb(106,40,52),
-    128px 72px rgb(117,36,55),
-    136px 72px rgb(0,0,0),
-    144px 72px rgb(0,0,0),
-    152px 72px rgb(63,63,63),
-    0px 80px rgb(0,0,0),
-    8px 80px rgb(0,0,0),
-    16px 80px rgb(173,47,61),
-    24px 80px rgb(191,41,52),
-    32px 80px rgb(3,1,4),
-    40px 80px rgb(230,230,230),
-    48px 80px rgb(19,22,27),
-    56px 80px rgb(132,31,49),
-    64px 80px rgb(185,44,52),
-    72px 80px rgb(136,27,46),
-    80px 80px rgb(119,30,48),
-    88px 80px rgb(73,36,44),
-    96px 80px rgb(0,2,1),
-    104px 80px rgb(123,32,49),
-    112px 80px rgb(120,33,50),
-    120px 80px rgb(44,13,21),
-    128px 80px rgb(0,0,0),
-    136px 80px rgb(0,0,0),
-    144px 80px rgb(0,0,0),
-    152px 80px rgb(63,63,63),
-    0px 88px rgb(0,0,0),
-    8px 88px rgb(0,0,0),
-    16px 88px rgb(131,30,46),
-    24px 88px rgb(192,41,48),
-    32px 88px rgb(32,0,3),
-    40px 88px rgb(20,21,25),
-    48px 88px rgb(179,186,194),
-    56px 88px rgb(4,3,1),
-    64px 88px rgb(130,27,44),
-    72px 88px rgb(135,28,46),
-    80px 88px rgb(91,40,49),
-    88px 88px rgb(1,1,1),
-    96px 88px rgb(1,1,1),
-    104px 88px rgb(4,3,8),
-    112px 88px rgb(132,29,46),
-    120px 88px rgb(121,32,50),
-    128px 88px rgb(0,0,0),
-    136px 88px rgb(0,0,0),
-    144px 88px rgb(0,0,0),
-    152px 88px rgb(63,63,63),
-    0px 96px rgb(0,0,0),
-    8px 96px rgb(0,0,0),
-    16px 96px rgb(131,30,46),
-    24px 96px rgb(126,32,48),
-    32px 96px rgb(182,46,58),
-    40px 96px rgb(131,30,44),
-    48px 96px rgb(128,27,45),
-    56px 96px rgb(129,31,44),
-    64px 96px rgb(132,29,46),
-    72px 96px rgb(132,29,46),
-    80px 96px rgb(136,27,50),
-    88px 96px rgb(4,0,2),
-    96px 96px rgb(176,183,193),
-    104px 96px rgb(100,32,45),
-    112px 96px rgb(132,29,46),
-    120px 96px rgb(87,41,51),
-    128px 96px rgb(0,0,0),
-    136px 96px rgb(0,0,0),
-    144px 96px rgb(0,0,0),
-    152px 96px rgb(63,63,63),
-    0px 104px rgb(0,0,0),
-    8px 104px rgb(0,0,0),
-    16px 104px rgb(131,30,46),
-    24px 104px rgb(188,43,50),
-    32px 104px rgb(130,29,35),
-    40px 104px rgb(131,30,48),
-    48px 104px rgb(1,1,0),
-    56px 104px rgb(132,29,46),
-    64px 104px rgb(2,1,0),
-    72px 104px rgb(132,29,46),
-    80px 104px rgb(132,29,46),
-    88px 104px rgb(131,30,46),
-    96px 104px rgb(134,28,48),
-    104px 104px rgb(132,29,46),
-    112px 104px rgb(124,30,44),
-    120px 104px rgb(1,1,1),
-    128px 104px rgb(0,0,0),
-    136px 104px rgb(0,0,0),
-    144px 104px rgb(0,0,0),
-    152px 104px rgb(63,63,63),
-    0px 112px rgb(0,0,0),
-    8px 112px rgb(0,0,0),
-    16px 112px rgb(10,0,0),
-    24px 112px rgb(129,33,47),
-    32px 112px rgb(134,26,39),
-    40px 112px rgb(134,29,46),
-    48px 112px rgb(118,37,46),
-    56px 112px rgb(132,29,46),
-    64px 112px rgb(128,33,41),
-    72px 112px rgb(132,29,46),
-    80px 112px rgb(89,29,37),
-    88px 112px rgb(134,29,46),
-    96px 112px rgb(129,31,46),
-    104px 112px rgb(126,32,48),
-    112px 112px rgb(112,27,48),
-    120px 112px rgb(0,0,0),
-    128px 112px rgb(0,0,0),
-    136px 112px rgb(0,0,0),
-    144px 112px rgb(0,0,0),
-    152px 112px rgb(63,63,63),
-    0px 120px rgb(0,0,0),
-    8px 120px rgb(0,0,0),
-    16px 120px rgb(2,2,2),
-    24px 120px rgb(134,29,46),
-    32px 120px rgb(134,29,46),
-    40px 120px rgb(82,40,42),
-    48px 120px rgb(131,30,44),
-    56px 120px rgb(9,0,0),
-    64px 120px rgb(101,38,47),
-    72px 120px rgb(135,28,46),
-    80px 120px rgb(68,5,14),
-    88px 120px rgb(132,29,46),
-    96px 120px rgb(132,29,46),
-    104px 120px rgb(128,27,43),
-    112px 120px rgb(14,0,0),
-    120px 120px rgb(0,0,0),
-    128px 120px rgb(0,0,0),
-    136px 120px rgb(0,0,0),
-    144px 120px rgb(0,0,0),
-    152px 120px rgb(63,63,63),
-    0px 128px rgb(0,0,0),
-    8px 128px rgb(0,0,0),
-    16px 128px rgb(0,0,0),
-    24px 128px rgb(132,29,46),
-    32px 128px rgb(136,27,46),
-    40px 128px rgb(131,30,44),
-    48px 128px rgb(132,29,46),
-    56px 128px rgb(132,29,46),
-    64px 128px rgb(108,28,53),
-    72px 128px rgb(18,0,0),
-    80px 128px rgb(132,29,46),
-    88px 128px rgb(132,29,46),
-    96px 128px rgb(132,29,46),
-    104px 128px rgb(107,28,47),
-    112px 128px rgb(0,0,0),
-    120px 128px rgb(0,0,0),
-    128px 128px rgb(0,0,0),
-    136px 128px rgb(0,0,0),
-    144px 128px rgb(0,0,0),
-    152px 128px rgb(63,63,63),
-    0px 136px rgb(0,0,0),
-    8px 136px rgb(0,0,0),
-    16px 136px rgb(177,183,195),
-    24px 136px rgb(134,32,46),
-    32px 136px rgb(11,1,0),
-    40px 136px rgb(137,28,47),
-    48px 136px rgb(132,29,46),
-    56px 136px rgb(132,29,46),
-    64px 136px rgb(134,29,44),
-    72px 136px rgb(123,39,55),
-    80px 136px rgb(138,27,44),
-    88px 136px rgb(132,29,46),
-    96px 136px rgb(135,28,46),
-    104px 136px rgb(0,1,0),
-    112px 136px rgb(0,0,0),
-    120px 136px rgb(0,0,0),
-    128px 136px rgb(0,0,0),
-    136px 136px rgb(0,0,0),
-    144px 136px rgb(0,0,0),
-    152px 136px rgb(63,63,63),
-    0px 144px rgb(0,0,0),
-    8px 144px rgb(10,10,10),
-    16px 144px rgb(173,180,190),
-    24px 144px rgb(11,0,7),
-    32px 144px rgb(139,26,46),
-    40px 144px rgb(28,4,4),
-    48px 144px rgb(132,29,46),
-    56px 144px rgb(128,32,46),
-    64px 144px rgb(5,1,0),
-    72px 144px rgb(132,29,46),
-    80px 144px rgb(54,3,12),
-    88px 144px rgb(132,29,46),
-    96px 144px rgb(113,29,52),
-    104px 144px rgb(98,104,120),
-    112px 144px rgb(0,0,0),
-    120px 144px rgb(0,0,0),
-    128px 144px rgb(0,0,0),
-    136px 144px rgb(0,0,0),
-    144px 144px rgb(0,0,0),
-    152px 144px rgb(63,63,63),
-    0px 152px rgb(0,0,0),
-    8px 152px rgb(253,253,253),
-    16px 152px rgb(254,255,255),
-    24px 152px rgb(250,219,217),
-    32px 152px rgb(27,0,2),
-    40px 152px rgb(132,29,46),
-    48px 152px rgb(132,29,46),
-    56px 152px rgb(249,217,218),
-    64px 152px rgb(112,49,57),
-    72px 152px rgb(116,28,44),
-    80px 152px rgb(14,0,0),
-    88px 152px rgb(111,30,49),
-    96px 152px rgb(1,1,1),
-    104px 152px rgb(181,187,199),
-    112px 152px rgb(0,0,0),
-    120px 152px rgb(0,0,0),
-    128px 152px rgb(0,0,0),
-    136px 152px rgb(0,0,0),
-    144px 152px rgb(0,0,0),
-    152px 152px rgb(63,63,63);}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>27 box shadow</title>
+  <link rel="stylesheet" href="/src/css/03.css.css">
+  <style>
+    /* ===== ESTILOS GENERALES DE LA PÁGINA ===== */
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
-    .section {
-        height: 200px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    </style>
+
+
+    /* ESTILOS DE LAS CAJAS */
+    .box {
+      width: 200px;
+      height: 200px;
+      background: #41ff80;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px auto;
+      transition: all 0.4s ease-out;
+      cursor: pointer;
+    }
+
+    .box1 {
+      box-shadow: 0 0 8px rgba(255,255,255,0.5);
+    }
+    .box2 {
+      box-shadow: -6px -6px 12px 0 rgba(255,255,255,0.4);
+    }
+    .box3 {
+      box-shadow: 0 0 12px rgba(255,255,255,0.3) inset;
+    }
+    .box4 {
+      box-shadow: 3px 3px 0 3px rgba(204,204,0,0.6), 6px 6px 0 5px rgba(0,0,204,0.5), 9px 9px 0 6px rgba(204,0,0,0.4);
+    }
+
+    /* IMÁGENES - UNA DEBAJO DE LA OTRA */
+    .images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .images img {
+      width: 100%;
+      max-width: 350px;
+      border: 10px solid rgb(250, 250, 250);
+      border-radius: 10%;
+      transition: all 0.4s ease-out;
+    }
+
+    .images img:first-child {
+      box-shadow: 0 0 8px rgba(255,255,255,0.5);
+    }
+
+    .images img:last-child {
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
+    }
+
+    /* ===== ANIMACIONES MÁS SOBRIAS Y PASIVAS ===== */
+    
+    .box1:hover {
+      box-shadow: 0 0 16px rgba(255,255,255,0.7), 0 0 24px rgba(255,255,255,0.3);
+      transform: scale(1.03);
+    }
+    
+    .box2:hover {
+      box-shadow: -10px -10px 20px 0 rgba(0,255,255,0.4), -4px -4px 12px 0 rgba(0,255,255,0.2);
+      transform: scale(1.03) rotate(-1deg);
+      background: linear-gradient(135deg, #51ff41, #9b30ff);
+    }
+    
+    .box3:hover {
+      box-shadow: 0 0 16px rgba(255,68,255,0.4) inset, 0 0 20px rgba(255,68,255,0.2);
+      transform: scale(1.03);
+      background: linear-gradient(135deg, #b341ff, #5fff50);
+    }
+    
+    .box4:hover {
+      box-shadow: 5px 5px 0 4px rgba(204,204,0,0.7), 10px 10px 0 6px rgba(0,0,204,0.6), 15px 15px 0 8px rgba(204,0,0,0.5);
+      transform: translateY(-3px);
+    }
+    
+    .images img:first-child:hover {
+      box-shadow: 0 0 16px rgba(255,0,255,0.4), 0 0 24px rgba(255,0,255,0.2);
+      transform: scale(1.02);
+    }
+    
+    .images img:last-child:hover {
+      filter: drop-shadow(0 0 12px rgba(0,255,136,0.4)) drop-shadow(0 0 20px rgba(0,255,136,0.2));
+      transform: scale(1.02);
+    }
+  </style>
 </head>
 <body>
-    <a href="../index.html" class="btn-home">
+  <a href="../index.html" class="btn-home">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256">
             <path
                 d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
             </path>
-        </svg> </a>
-    <main>
-        <header>
-            <h1>27-box-shadow</h1>
-            <h2>Property attaches one or more shadows to an element.</h2>
+        </svg> 
+    </a>
 
-        </header>
-        <section class="section">
-            <div class="px"></div>
-        </section>
-    </main>
+  <main>
+    <header>
+      <h1>27 box shadow</h1>
+      <h2>Property attaches one or more shadows to an element.</h2>
+    </header>
+
+    <section>
+      <h3>box-shadow: 0 0 12px #fff</h3>
+      <div class="box box1"></div>
+    </section>
+
+    <section>
+      <h3>box-shadow: -10px -10px 24px 0 #fff</h3>
+      <div class="box box2"></div>
+    </section>
+
+    <section>
+      <h3>box-shadow: 0 0 20px #fff inset</h3>
+      <div class="box box3"></div>
+    </section>
+
+    <section>
+      <h3>box-shadow: multiple</h3>
+      <div class="box box4"></div>
+    </section>
+
+    <section>
+      <h3>box-shadow VS drop-shadow()</h3>
+      <div class="images">
+        <img src="/src/imgs/mononoke.avif" alt="box-shadow effect">
+        <img src="/src/imgs/mononoke.avif" alt="drop-shadow effect">
+      </div>
+    </section>
+  </main>
 </body>
 </html>

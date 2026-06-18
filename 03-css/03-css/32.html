@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_document</title>
+    <link rel="stylesheet" href="/src/css/03.css.css">
+    <link rel="stylesheet" href="/src/css/externalfile.css">
+
+    <style>
+        .clip-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+.clip-gallery img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+/* 1. Círculo - se expande */
+.clip1 {
+    clip-path: circle(30%);
+    transition: clip-path 0.8s ease;
+}
+
+.clip1:hover {
+    clip-path: circle(75%);
+}
+
+
+/* 2. Triángulo - cambia de forma */
+.clip2 {
+    clip-path: polygon(
+        50% 0%,
+        0% 100%,
+        100% 100%
+    );
+
+    transition: clip-path 1s ease-in-out;
+}
+
+.clip2:hover {
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        50% 100%
+    );
+}
+
+
+/* 3. Diamante - gira visualmente */
+.clip3 {
+    clip-path: polygon(
+        50% 0%,
+        100% 50%,
+        50% 100%,
+        0% 50%
+    );
+
+    transition: clip-path 0.7s linear;
+}
+
+.clip3:hover {
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%
+    );
+}
+
+
+/* 4. Hexágono - aparece desde el centro */
+.clip4 {
+    clip-path: polygon(
+        25% 0%,
+        75% 0%,
+        100% 50%,
+        75% 100%,
+        25% 100%,
+        0% 50%
+    );
+
+    transition: clip-path 1.2s ease;
+}
+
+.clip4:hover {
+    clip-path: inset(0);
+}
+
+
+/* 5. Estrella - efecto elástico */
+.clip5 {
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 100%,
+        50% 75%,
+        21% 100%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+
+    transition: clip-path 1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.clip5:hover {
+    clip-path: circle(50%);
+}
+
+
+/* 6. Zoom con forma */
+.clip6 {
+    clip-path: ellipse(30% 40%);
+    transition: 
+        clip-path 0.8s ease,
+        transform 0.8s ease;
+}
+
+.clip6:hover {
+    clip-path: ellipse(70% 70%);
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+    <a class="btn-home" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path></svg>
+    </a>
+    <main>
+        <header>
+            <h1>32. web fonts</h1>
+            <h2>Use fonts that are not installed on the user's computer.</h2>
+            <section class="clip-path-examples">
+
+                <div class="clip-gallery">
+
+                    <img class="clip1" src="/src/imgs/OLIVER.jpg">
+
+                    <img class="clip2" src="/src/imgs/OLIVER.jpg">
+
+                    <img class="clip3" src="/src/imgs/OLIVER.jpg">
+
+                    <img class="clip4" src="/src/imgs/OLIVER.jpg">
+
+                    <img class="clip5" src="/src/imgs/OLIVER.jpg">
+
+                    <img class="clip6" src="/src/imgs/OLIVER.jpg">
+
+                </div>
+        </section>
+        </header>
+    </main>
+</body>
+</html>
