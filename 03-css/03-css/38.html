@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38 Media Queries</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+        * {
+            transition: all 0.5s ease-in;
+        }
+         a.btn-home {
+                border: 2px solid white;
+                border-radius: 50%;
+                position: fixed;
+                display: flex;
+                inset: 0.4rem;
+                padding: 0.4rem;
+                width: 32px;
+                height: 32px;
+                transition: all 0.4s ease-in;
+             } 
+                a.btn-home:hover {
+                    transform: scale(1.05);
+                    opacity: 1;
+                }
+
+        body {
+            font-family: Poppins;
+            background-color: #013571;
+            color: #fff;
+            margin: 0;
+            min-height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        main {
+            padding: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+        }
+
+        header figure.logo {
+            background: url(/src/imgs/pepsi01.png) no-repeat center / contain;
+            height: 354px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 919px;
+            position: relative;
+            z-index: 2;
+        }
+
+        section h1 {
+            text-align: center;
+        }
+        section h1 span.md,
+        section h1 span.sm {
+            display: none;
+        }
+
+        section p {
+            margin-block: 4rem;
+            text-align: justify;
+            line-height: 2rem;
+            color: #e0f0ff;
+        }
+
+        @media (max-width: 1024px) {
+            body main section h1 span.lg { display: none; }
+            body main section h1 span.md { display: inline; }
+            body main header figure.logo {
+                height: 250px;
+                background: url(/src/imgs/pepsi02.png) no-repeat center / contain;
+            }
+        }
+
+        @media (max-width: 780px) {
+            body main section h1 span.md { display: none; }
+            body main section h1 span.sm { display: inline; }
+            body main header figure.logo {
+                height: 150px;
+                background: url(/src/imgs/pepsi03.png) no-repeat center / contain;
+            }
+            body main {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="btn-home" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path></svg>
+    </a>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+        </header>
+        <section>
+            <h1>
+                Media Queries
+                <span class="lg"> (> 1024px) 🖥️Desktop </span>
+                <span class="md"> (< 1024px) 💻Tablet </span>
+                <span class="sm"> (> 780px) 📱Mobile </span>
+            </h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio vitae autem exercitationem assumenda distinctio excepturi voluptas culpa sequi recusandae ab officia, blanditiis quaerat, eligendi a suscipit animi nisi alias cupiditate reiciendis fugiat eum nam similique ad vero. Nam eius repellendus saepe quos error, doloribus, qui nulla, necessitatibus vitae nihil sit obcaecati impedit quo molestias laboriosam possimus enim adipisci odio eum vel ex eaque optio est! In odit, doloribus totam eos laborum quasi est dolores alias! Officia repudiandae fugit, error quod obcaecati dolorem dolores et soluta ipsam commodi! Rem illo repellendus nam nesciunt ut? Corrupti est molestiae libero, minus perspiciatis at eligendi delectus excepturi architecto? Temporibus, blanditiis sunt tempore ab in sed error nemo et! Adipisci mollitia dolores et reprehenderit voluptas.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

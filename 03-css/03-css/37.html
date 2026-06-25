@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_document</title>
+    <link rel="stylesheet" href="/src/css/03.css.css">
+    <link rel="stylesheet" href="/src/css/externalfile.css">
+     <style>
+    main section{
+            display: flex;
+            justify-content: center;
+        div.jungle{
+            background: url(/src/imgs/jungle.png) no-repeat center;
+            border-radius: 4px;
+            margin-block: 2rem;
+            position: relative;
+            height: 471px;
+            width: 380px;
+            img{
+                border-radius: 0;
+                border: none;
+                position: absolute;
+            }
+            img.logo {
+                top: 35px;
+                left: 30px;
+                height: 72px;
+                object-fit: contain;
+                z-index: 9;
+                width: 317px;
+                animation: 1s animLogo ease-in infinite;
+            }
+            img.dk{
+                top: 100px;
+                left: 120px;
+                width: 140px;
+                z-index: 8;
+                object-fit: contain;
+                animation: 2s animDk ease-out infinite;
+            }
+            div.move {
+                position: absolute;
+                top: 210px;
+                left: 0;
+                img.ryno {
+                    width: 140px;
+                    object-fit: contain;
+                    top: 0;
+                    animation: 3s animRyno linear infinite;
+                }
+            }
+        }
+    }
+    @keyframes animLogo{
+        0%, 100%{
+            transform: scale(1)
+        }
+        50%{
+            transform: scale(1.2)
+        }
+    }
+    @keyframes animDk{
+        0% {top: 130px; transform: rotateX(0deg); }
+        40% {top: 80px; transform: rotateX(0deg); }
+        50% {top: 80px; transform: rotateX(360deg); }
+        60% {top: 80px; transform: rotateX(360deg); }
+        100% {top: 130px; transform: rotateX(360deg); }
+    }
+    @keyframes animRyno {
+0% {
+        transform: translateX(0) scaleX(1) rotate(0deg);
+    }
+    10% {
+        transform: translateX(-10px) scaleX(1) rotate(8deg); 
+    }
+    20% {
+        transform: translateX(180px) scaleX(1) rotate(-15deg); 
+    }
+    30% {
+        transform: translateX(180px) scaleX(1) rotate(0deg); 
+    }
+    35% {
+        transform: translateX(180px) scaleX(-1) rotate(0deg); 
+    }
+    45% {
+        transform: translateX(190px) scaleX(-1) rotate(8deg); 
+    }
+    60% {
+        transform: translateX(0px) scaleX(-1) rotate(-15deg); 
+    }
+    85% {
+        transform: translateX(0px) scaleX(-1) rotate(0deg); 
+    }
+    95%, 100% {
+        transform: translateX(0) scaleX(1) rotate(0deg);
+    }
+}
+    </style>
+</head>
+<body>
+    <a class="btn-home" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path></svg>
+    </a>
+    <main>
+        <header>
+            <h1>37. animations</h1>
+            <h2>Lets an element gradually change from one style to another.</h2>
+         <section>
+            <div class="jungle">
+                <img src="/src/imgs/logo-dk.png" class="logo" alt="logo">
+                <img src="/src/imgs/dk.png" class="dk" alt="dk">
+                <div class="move">
+                    <img src="/src/imgs/ryno.png" class="ryno" alt="ryno">
+                </div>
+            </div>
+        </section>
+        </header>
+    </main>
+</body>
+</html>
