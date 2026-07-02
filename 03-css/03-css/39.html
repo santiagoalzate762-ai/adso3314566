@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dorohedoro</title>
+    <style>
+     *{
+        margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+     body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        background-image: url('/src/imgs/jedre.webp');
+        min-height: 100dvh;
+        position: relative;
+        overflow-x: hidden;
+        color: #fff;
+        padding: 2rem 1.5rem;
+     }   
+
+     body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../src/imgs/fondo.jpg) no-repeat center center / cover;
+            opacity: 0.25;
+            z-index: -1;
+            filter: blur(1px);
+        }
+
+
+
+        .contenido {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: block;
+            max-width: 220px;
+            margin: 0 auto 2.5rem auto;
+            width: 100%;
+            height: auto;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .tarjeta {
+            position: relative;
+            overflow: hidden;
+            background: #000;
+            aspect-ratio: 1 / 1; 
+             
+        }
+
+
+        .tarjeta img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .tarjeta .nombre {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0.7rem 0.5rem;
+            background: 18822e;
+            backdrop-filter: blur(2px);
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+            border-top: 3px solid rgba(255, 255, 255, 0.9);
+            transition: transform 0.4s ease, background 0.3s;
+            transform: translateY(0);
+            border-radius: 0;
+            background: #18822e;
+        }
+
+        .tarjeta:hover .nombre {
+            transform: translateY(30%);
+            background: #034711;
+        }
+
+        .bloques {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .bloque {
+            display: flex;
+
+            background: rgb(119, 8, 8);
+            backdrop-filter: blur(6px);
+            border-radius: 0;
+            padding: 1.2rem 1.5rem;
+            gap: 1.8rem;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .bloque img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 0;
+            flex-shrink: 0;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .bloque .info {
+            flex: 1;
+        }
+        .bloque .info h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+            padding-bottom: 0.3rem;
+            display: inline-block;
+        }
+
+        .bloque .info p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e0f0ff;
+            margin-top: 0.6rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 1024px) {
+            .tarjetas {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .bloque {
+                flex-direction: row;
+                padding: 1rem;
+            }
+            .bloque img {
+                width: 110px;
+                height: 110px;
+            }
+        }
+
+        @media (max-width: 780px) {
+            .tarjetas {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .bloque {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.2rem;
+            }
+            .bloque img {
+                width: 140px;
+                height: 140px;
+            }
+            .bloque .info h3 {
+                border-bottom: 2px solid rgba(255,255,255,0.6);
+                display: inline-block;
+            }
+            .logo {
+                max-width: 160px;
+            }
+            body {
+                padding: 1rem;
+            }
+        }
+
+        * {
+            border-radius: 0 !important;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="contenido">
+
+      <img src="/src/imgs/Dorohedoro_logo.png" alt="Logo" class="logo" />
+       <div class="tarjetas">
+            <div class="tarjeta">
+                <img src="/src/imgs/90e9b73d051bd2e55102ee11a35fd91d.jpg" alt="Caiman" />
+                <div class="nombre">Caiman</div>
+            </div>
+            <div class="tarjeta">
+                <img src="/src/imgs/nikido.jpeg" alt="Nikaido" />
+                <div class="nombre">Nikaido</div>
+            </div>
+            <div class="tarjeta">
+                <img src="/src/imgs/en.jpeg" alt="En" />
+                <div class="nombre">En</div>
+            </div>
+            <div class="tarjeta">
+                <img src="/src/imgs/shin.jpg" alt="Shin" />
+                <div class="nombre">Shin</div>
+            </div>
+            <div class="tarjeta">
+                <img src="/src/imgs/noi.jpeg" alt="Noi" />
+                <div class="nombre">Noi</div>
+            </div>
+            <div class="tarjeta">
+                <img src="/src/imgs/fujit.jpeg" alt="Fujita" />
+                <div class="nombre">Fujita</div>
+            </div>
+            <div class="tarjeta">
+                <img src="/src/imgs/ebisu.jpeg" alt="Ebisu" />
+                <div class="nombre">Ebisu</div>
+            </div>
+            <div class="tarjeta">
+                <img src="/src/imgs/ki.jpeg" alt="Kai" />
+                <div class="nombre">Kai</div>
+            </div>
+        </div>
+        
+        <div class="bloques">
+            <div class="bloque">
+                <img src="/src/imgs/profe.jpeg" alt="Profesor Kasukabe" />
+                <div class="info">
+                    <h3>Profesor Kasukabe</h3>
+                    <p> Un excéntrico científico que estudia a los hechiceros. Creó una puerta artificial al mundo mágico y modificó su propio cuerpo para rejuvenecer, aparentando ser un adolescente.</p>
+                </div>
+            </div>
+            <div class="bloque">
+                <img src="/src/imgs/vux.jpeg" alt="Vaux" />
+                <div class="info">
+                    <h3>Vaux</h3>
+                    <p> El médico principal del hospital de The Hole. Es un hombre robusto experto en tratar las horribles mutaciones y heridas causadas por la magia de los hechiceros.</p>
+                </div>
+            </div>
+            <div class="bloque">
+                <img src="/src/imgs/johnson.jpeg" alt="Johnson" />
+                <div class="info">
+                    <h3>Johnson</h3>
+                    <p>Una cucaracha gigante alterada por la magia residual. Vive con el Profesor Kasukabe y, aunque solo puede pronunciar la palabra "¡Shocking!", es un aliado leal que viste zapatillas deportivas.</p>
+                </div>
+            </div>
+            <div class="bloque">
+                <img src="/src/imgs/trece.jpeg" alt="Thirteen" />
+                <div class="info">
+                    <h3>13 (Thirteen)</h3>
+                    <p>Un cliente habitual del restaurante Hungry Bug. Es un humano común y corriente con una personalidad enérgica que se siente atraído por Nikaido.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </body>
+</html>
