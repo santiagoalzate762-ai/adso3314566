@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_document</title>
+    <link rel="stylesheet" href="/src/css/04-javascript.css">
+    
+</head>
+<body>
+    <a class="btn-home" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path></svg>
+    </a>
+    <main>
+        <header>
+            <h1>01-write</h1>
+            <h2>Aprende a escribir y ejecutar código básico de JavaScript.</h2>
+            <section>
+                <p id="message"></p>
+            </section>
+        </header>
+    </main>
+    <script>
+        const objs = document.getElementById('message');
+
+        const string = new String('javascript');
+        objs.innerHTML = `<li>${string} -> object: ${string.constructor.name}</li>`;
+
+        const number = new Number(256);
+        objs.innerHTML += `<li>${number} -> object: ${number.constructor.name}</li>`;
+
+        const bool = new Boolean(512 > 128);
+        objs.innerHTML += `<li>${bool} -> object: ${bool.constructor.name}</li>`;
+
+        const array = new Array(1, 2, 3, 4, 5);
+        objs.innerHTML += `<li>${array} -> object: ${array.constructor.name}</li>`;
+
+        const dt = new Date('12/12/2026');
+        objs.innerHTML += `<li>${dt.getFullYear()} -> object: ${dt.constructor.name}</li>`;
+
+        const object = new Object('vehicle');
+        objs.innerHTML += `<li>${object} -> object: ${object.constructor.name}</li>`;
+    </script>
+</body>
+</html>
