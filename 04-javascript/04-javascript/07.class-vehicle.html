@@ -3,43 +3,462 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01_document</title>
+    <title>07-class-vehicle</title>
     <link rel="stylesheet" href="/src/css/04-javascript.css">
-    
+
+    <style>
+        .vehicle {
+            background-color: #141518;
+            border-radius: 8px;
+            margin: 0 auto;
+            min-height: 813px;
+            padding: 20px;
+            width: 425px;
+            transition: .3s;
+        }
+
+        .vehicle header {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 344px;
+        }
+
+        .vehicle header figure {
+            height: 70px;
+            margin: 0;
+            width: 245px;
+        }
+
+        .vehicle header figure img {
+            height: 100%;
+            object-fit: contain;
+            width: 100%;
+        }
+
+        .vehicle header .mode {
+            background-color: #191a1c;
+            border: none;
+            border-radius: 9px;
+            cursor: pointer;
+            height: 60px;
+            padding: 0;
+            width: 82px;
+        }
+
+        .vehicle header .mode img {
+            height: 100%;
+            object-fit: contain;
+            width: 100%;
+        }
+
+        .vehicle nav {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px auto 0;
+            width: 344px;
+        }
+
+        .vehicle nav button {
+            background-color: #191a1c;
+            border: none;
+            border-radius: 9px;
+            cursor: pointer;
+            height: 61px;
+            padding: 0;
+            width: 82px;
+            transition: .2s;
+        }
+
+        .vehicle nav button:hover {
+            transform: scale(1.05);
+        }
+
+        .vehicle nav button img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .vehicle nav figure {
+            height: 75px;
+            margin: 0;
+            width: 125px;
+        }
+
+        .vehicle nav figure img {
+            height: 100%;
+            object-fit: contain;
+            width: 100%;
+        }
+
+        .vehicle-options {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 30px auto 0;
+            width: 344px;
+        }
+
+        .vehicle-options .option {
+            align-items: center;
+            background-color: #18191b;
+            border: none;
+            border-radius: 9px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 110px;
+            justify-content: center;
+            padding: 8px;
+        }
+
+        .vehicle-options .option img {
+            height: 38px;
+            margin-bottom: 8px;
+            object-fit: contain;
+            width: 70px;
+        }
+
+        .vehicle-options .option span:last-child {
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .vehicle-image {
+            background-color: #18191b;
+            height: 233px;
+            margin: 47px auto 0;
+            overflow: hidden;
+            width: 344px;
+        }
+
+        .vehicle-image img {
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .vehicle-controls {
+            display: grid;
+            gap: 6px;
+            grid-template-columns: repeat(5, 1fr);
+            margin: 64px auto 0;
+            width: 344px;
+        }
+
+        .control {
+            align-items: center;
+            background-color: #18191b;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            height: 80px;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .control small {
+            height: 100%;
+            width: 100%;
+        }
+
+        .control small img {
+            height: 100%;
+            object-fit: contain;
+            width: 100%;
+        }
+
+        .vehicle.dark {
+            background-color: #dfd0d0;
+        }
+
+        .vehicle.off {
+            opacity: .65;
+        }
+
+        @media (max-width: 400px) {
+            .vehicle {
+                width: 100%;
+            }
+
+            .vehicle header,
+            .vehicle nav,
+            .vehicle-options,
+            .vehicle-image,
+            .vehicle-controls {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <a class="btn-home" href="../index.html">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path></svg>
-    </a>
-    <main>
-        <header>
-            <h1>01-write</h1>
-            <h2>Aprende a escribir y ejecutar código básico de JavaScript.</h2>
-            <section>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/rAYZnCxbPx0QcREWMqYCd2/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+
+<a href="../04-js/" class="btn-home"></a>
+
+<main>
+    <h1>07-class-vehicle</h1>
+    <h2>Create and manipulate a vehicle object with properties.</h2>
+
+    <section>
+        <iframe
+            style="border: 1px solid rgba(0, 0, 0, 0.1);"
+            width="800"
+            height="450"
+            src="https://embed.figma.com/design/rAYZnCxbPx0QcREWMqYCd2/Untitled?node-id=0-1&embed-host=share"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <section>
+        <div class="vehicle">
+
+            <header>
+                <figure class="logo">
+                    <img src="/src/imgs/vehicle/mustang.svg" alt="">
+                </figure>
+
+                <button class="mode">
+                    <img src="/src/imgs/vehicle/Group 1 (1).svg" alt="">
+                </button>
+            </header>
+
+            <nav>
+                <button class="prev">
+                    <img src="/src/imgs/vehicle/prev.svg" alt="">
+                </button>
+
+                <figure class="brand">
+                    <img src="/src/imgs/vehicle/logo.svg" alt="">
+                </figure>
+
+                <button class="next">
+                    <img src="/src/imgs/vehicle/next.svg" alt="">
+                </button>
+            </nav>
+
+            <section class="vehicle-options">
+                <button class="option">
+                    <img src="/src/imgs/vehicle/model.svg" alt="">
+                    <span class="model-data"></span>
+                </button>
+
+                <button class="option">
+                    <img src="/src/imgs/vehicle/refer.svg" alt="">
+                    <span class="refer-data"></span>
+                </button>
+
+                <button class="option">
+                    <img src="/src/imgs/vehicle/color.svg" alt="">
+                    <span class="color-data"></span>
+                </button>
             </section>
-        </header>
-    </main>
-    <script>
-        const objs = document.getElementById('message');
 
-        const string = new String('javascript');
-        objs.innerHTML = `<li>${string} -> object: ${string.constructor.name}</li>`;
+            <figure class="vehicle-image">
+                <img src="" alt="Ford Mustang">
+            </figure>
 
-        const number = new Number(256);
-        objs.innerHTML += `<li>${number} -> object: ${number.constructor.name}</li>`;
+            <section class="vehicle-controls">
+                <button class="control on">
+                    <small>
+                        <img src="/src/imgs/vehicle/on.svg" alt="">
+                    </small>
+                </button>
 
-        const bool = new Boolean(512 > 128);
-        objs.innerHTML += `<li>${bool} -> object: ${bool.constructor.name}</li>`;
+                <button class="control forward">
+                    <small>
+                        <img src="/src/imgs/vehicle/forw.svg" alt="">
+                    </small>
+                </button>
 
-        const array = new Array(1, 2, 3, 4, 5);
-        objs.innerHTML += `<li>${array} -> object: ${array.constructor.name}</li>`;
+                <button class="control stop">
+                    <small>
+                        <img src="/src/imgs/vehicle/stop.svg" alt="">
+                    </small>
+                </button>
 
-        const dt = new Date('12/12/2026');
-        objs.innerHTML += `<li>${dt.getFullYear()} -> object: ${dt.constructor.name}</li>`;
+                <button class="control back">
+                    <small>
+                        <img src="/src/imgs/vehicle/back.svg" alt="">
+                    </small>
+                </button>
 
-        const object = new Object('vehicle');
-        objs.innerHTML += `<li>${object} -> object: ${object.constructor.name}</li>`;
-    </script>
+                <button class="control off">
+                    <small>
+                        <img src="/src/imgs/vehicle/off.svg" alt="">
+                    </small>
+                </button>
+            </section>
+        </div>
+    </section>
+</main>
+
+<script>
+    const vhc = document.querySelector('.vehicle');
+    const mode = document.querySelector('.mode');
+    const brand = document.querySelector('.brand img');
+    const model = document.querySelector('.model-data');
+    const refer = document.querySelector('.refer-data');
+    const color = document.querySelector('.color-data');
+    const vehicleImage = document.querySelector('.vehicle-image img');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+
+    const on = document.querySelector('.on');
+    const off = document.querySelector('.off');
+    const forward = document.querySelector('.forward');
+    const back = document.querySelector('.back');
+    const stop = document.querySelector('.stop');
+
+    let index = 0;
+    let state = false;
+
+    const vehicles = {
+        attrs: [
+            {
+                brand: 'Mustang',
+                refer: 'GT Premium',
+                model: '2024',
+                color: 'Red',
+                image: '/src/imgs/vehicle/mustang-gt.png'
+            },
+            {
+                brand: 'Mustang',
+                refer: 'Dark Horse',
+                model: '2024',
+                color: 'Blue',
+                image: '/src/imgs/vehicle/mustang-dark-horse.png'
+            },
+            {
+                brand: 'Mustang',
+                refer: 'Shelby GT500',
+                model: '2022',
+                color: 'Black',
+                image: '/src/imgs/vehicle/mustang-shelby.png'
+            },
+            {
+                brand: 'Mustang',
+                refer: 'Mach 1',
+                model: '2021',
+                color: 'Grey',
+                image: '/src/imgs/vehicle/mustang-mach1.png'
+            },
+            {
+                brand: 'Mustang',
+                refer: 'Boss 302',
+                model: '2013',
+                color: 'White',
+                image: '/src/imgs/vehicle/mustang-boss.png'
+            }
+        ]
+    };
+
+    const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const updateTheme = e => {
+        vhc.classList.toggle('dark', e.matches);
+    };
+
+    if (darkMode.addEventListener) {
+        darkMode.addEventListener('change', updateTheme);
+    } else {
+        darkMode.addListener(updateTheme);
+    }
+
+    updateTheme(darkMode);
+
+    mode.addEventListener('click', () => {
+        vhc.classList.toggle('dark');
+    });
+
+    class Vehicle {
+        constructor(brand, refer, model, color, image) {
+            this.brand = brand;
+            this.refer = refer;
+            this.model = model;
+            this.color = color;
+            this.image = image;
+
+            this.displayData();
+        }
+
+        displayData() {
+            model.textContent = this.model;
+            refer.textContent = this.refer;
+            color.textContent = this.color;
+
+            vehicleImage.src = this.image;
+            vehicleImage.alt = `${this.brand} ${this.refer}`;
+        }
+    }
+
+    function showVehicle() {
+        const vehicle = vehicles.attrs[index];
+
+        new Vehicle(
+            vehicle.brand,
+            vehicle.refer,
+            vehicle.model,
+            vehicle.color,
+            vehicle.image
+        );
+    }
+
+    prev.addEventListener('click', () => {
+        index--;
+
+        if (index < 0) {
+            index = vehicles.attrs.length - 1;
+        }
+
+        showVehicle();
+    });
+
+    next.addEventListener('click', () => {
+        index++;
+
+        if (index >= vehicles.attrs.length) {
+            index = 0;
+        }
+
+        showVehicle();
+    });
+
+    on.addEventListener('click', () => {
+        state = true;
+        vhc.classList.remove('off');
+    });
+
+    off.addEventListener('click', () => {
+        state = false;
+        vhc.classList.add('off');
+    });
+
+    forward.addEventListener('click', () => {
+        if (state) {
+            vehicleImage.style.transform = 'translateX(20px)';
+            vehicleImage.style.transition = '.3s';
+        }
+    });
+
+    back.addEventListener('click', () => {
+        if (state) {
+            vehicleImage.style.transform = 'translateX(-20px)';
+            vehicleImage.style.transition = '.3s';
+        }
+    });
+
+    stop.addEventListener('click', () => {
+        vehicleImage.style.transform = 'translateX(0)';
+    });
+
+    showVehicle();
+</script>
+
 </body>
 </html>
